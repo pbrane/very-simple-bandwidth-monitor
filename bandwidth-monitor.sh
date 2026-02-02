@@ -2,7 +2,8 @@
 set -euo pipefail
 
 TOTAL_HOURS=168  # 7 days
-LOG_FILE="$HOME/bandwidth-log.csv"
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+LOG_FILE="$SCRIPT_DIR/logs/bandwidth-log.csv"
 PID_FILE="$HOME/.bandwidth-monitor.pid"
 
 echo $$ > "$PID_FILE"
